@@ -91,10 +91,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pakdairy_pak',  # Replace with your database name
-        'USER': 'root',                # MySQL username
-        'PASSWORD': 'admin',   # MySQL password
+        'USER': 'admin',                # MySQL username
+        'PASSWORD': 'P@k!@#$',   # MySQL password
         'HOST': '0.0.0.0',            # Set to 'localhost' or your MySQL server address
-        'PORT': '3306',                 # Default MySQL port
+        'PORT': '3305',                 # Default MySQL port
     }
 }
 
