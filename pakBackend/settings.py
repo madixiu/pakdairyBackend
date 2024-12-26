@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'pak',
+    # 'pakdairy',
 ]
 
 MIDDLEWARE = [
@@ -89,17 +90,25 @@ WSGI_APPLICATION = 'pakBackend.wsgi.application'
 # }
 
 # settings.py
-
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'pakdairy_pak',  # Replace with your MySQL database name
+    #     'USER': 'admin',         # MySQL username
+    #     'PASSWORD': 'P@k!@#$',    # MySQL password
+    #     'HOST': '0.0.0.0',       # Set to 'localhost' or your MySQL server address
+    #     'PORT': '3305',          # Default MySQL port
+    # },
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pakdairy_pak',  # Replace with your database name
-        'USER': 'admin',                # MySQL username
-        'PASSWORD': 'P@k!@#$',   # MySQL password
-        'HOST': '0.0.0.0',            # Set to 'localhost' or your MySQL server address
-        'PORT': '3305',                 # Default MySQL port
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pakdairy_pak',  # Replace with your PostgreSQL database name
+        'USER': 'admin',         # PostgreSQL username
+        'PASSWORD': 'P@k!@#$',    # PostgreSQL password
+        'HOST': '0.0.0.0',       # Set to 'localhost' or your PostgreSQL server address
+        'PORT': '5432',          # Default PostgreSQL port
     }
 }
+# DATABASE_ROUTERS = ['db_router.PakDairyRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -132,7 +141,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files (CSSpython manage.py makemigrations myapp, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
